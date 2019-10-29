@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-python
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-python
+  template:
+    metadata:
+      labels:
+        app: hello-python
+    spec:
+      containers:
+      - name: hello-python
+        image: nkem/hello-python:latest
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+          limits:
+            cpu: 100m
+            memory: 150Mi
+
+
