@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: hello-python-ingress
+spec:
+  tls:
+    - hosts:
+      - hello-python.dev.io
+      secretName: dev-io-tls
+  rules:
+    - host: hello-python.dev.io
+      http:
+        paths:
+          - backend:
+              serviceName: hello-python
+              servicePort: 5000

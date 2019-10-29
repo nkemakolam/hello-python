@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: odytrice/hello-python:latest
+        image: nkem/hello-python:latest
         ports:
         - containerPort: 5000
         resources:
