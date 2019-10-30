@@ -1,5 +1,0 @@
-namespace: hello-python
-resources:
-  - deployment.yaml
-  - service.yaml
-  - ingress.yaml
