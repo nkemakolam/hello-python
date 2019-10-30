@@ -1,18 +1,11 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: hello-python-ingress
-  annotations:
-    kubernetes.io/ingress.class: nginx
+  name: python-ingress
 spec:
-  rules:
-  - http:
-      paths:
-      - path: /
-        backend:
-          serviceName: front-end
-          servicePort: 80
-
+  backend:
+    serviceName: testsvc
+    servicePort: 80
 
 
 
